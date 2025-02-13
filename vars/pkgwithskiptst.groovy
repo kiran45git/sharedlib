@@ -1,4 +1,5 @@
 def call() {   
-     sh 'mvn package -DskipTests=true'      
+    def mavenCommand = 'mvn package -DskipTests=true' 
+     sh script:mavenCommand, returnStatus: true
     
 }
